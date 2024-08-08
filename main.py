@@ -21,7 +21,9 @@ class Hotel:
             return True
         else:
             return False
-
+    @classmethod
+    def get_hotel_data(cls,data):
+        return len(data)
 
 class ReservationTicket:
     def __init__(self, customer_name, hotel_object):
@@ -36,6 +38,16 @@ class ReservationTicket:
         Hotel name: {self.hotel.name}
         """
         return content
+    
+    @property
+    def get_customer_name(self):
+        name = self.customer_name.strip()
+        name = name.title()
+        return name
+    
+    @staticmethod
+    def convert(amount):
+        return amount * 1.1
 
 
 class CreditCard:
