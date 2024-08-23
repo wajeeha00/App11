@@ -44,10 +44,6 @@ class ReservationTicket:
         name = self.customer_name.strip()
         name = name.title()
         return name
-    
-    @staticmethod
-    def convert(amount):
-        return amount * 1.1
 
 
 class CreditCard:
